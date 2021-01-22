@@ -15,9 +15,11 @@ A new Flutter plugin.
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
-  s.platform = :ios, '8.0'
-
-  # Flutter.framework does not contain a i386 slice.
-  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
+  s.dependency 'SnapSDK', '1.4'
+  s.static_framework = true
+  s.ios.deployment_target = '11.0'
+  s.preserve_paths = 'SCSDKLoginKit.framework'
+  s.xcconfig = { 'OTHER_LDFLAGS' => '-framework SCSDKLoginKit' }
+  s.vendored_frameworks = 'SCSDKLoginKit.framework'
   s.swift_version = '5.0'
 end

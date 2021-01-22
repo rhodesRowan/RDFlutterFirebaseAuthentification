@@ -13,7 +13,9 @@ dependencies:
     sdk: flutter
   firebase_core: "^0.7.0"
   firebase_auth: "^0.20.0+1"
-  firebase_analytics: "^7.0.1"
+  http: ^0.12.2
+  sign_in_with_apple: ^2.5.4
+  crypto: ^2.1.5
 
 dev_dependencies:
   flutter_test:

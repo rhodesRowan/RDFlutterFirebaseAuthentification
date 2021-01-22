@@ -60,4 +60,8 @@ flutter {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation([
+            'com.snapchat.kit.sdk:login:1.1.4',
+            'com.snapchat.kit.sdk:core:1.1.4'
+    ])
 }
